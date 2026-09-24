@@ -48,7 +48,10 @@ export default function ProductsPage() {
           <p className="eyebrow">Questions or availability</p>
           <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">Contact The Peptide Papi.</h2>
           <p className="mt-4 max-w-2xl text-white/70">Send a message about current availability, product documentation, or order support.</p>
-          <Link href="/contact" className="cta-button mt-6">Contact us</Link>
+          <div className="mt-6 flex flex-wrap gap-4">
+            <Link href="/order" className="cta-button">Start an order</Link>
+            <Link href="/contact" className="ghost-button">Contact us</Link>
+          </div>
         </section>
       </SectionShell>
     </div>

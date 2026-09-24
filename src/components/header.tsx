@@ -30,7 +30,10 @@ export function Header() {
           })}
         </nav>
 
-        <Link href="/contact" className="cta-button">Contact</Link>
+        <div className="flex items-center gap-2">
+          <Link href="/contact" className="ghost-button hidden sm:inline-flex">Contact</Link>
+          <Link href="/order" className="cta-button">Order</Link>
+        </div>
       </div>
 
       <div className="border-t border-white/5 px-4 py-3 lg:hidden">

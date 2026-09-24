@@ -22,6 +22,7 @@ export function Footer() {
             <p className="eyebrow">Explore</p>
             <div className="mt-3 grid gap-2 text-white/70">
               <Link href="/products">Products</Link>
+              <Link href="/order">Order</Link>
               <Link href="/gallery">Gallery</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/disclaimer">Disclaimer</Link>
