@@ -11,9 +11,8 @@ export default function Home() {
       <Hero />
 
       <SectionShell
-        eyebrow="Why this version is better"
-        title="It sounds more like the category leaders — without inheriting their riskiest habits."
-        copy="The copy now borrows the strongest patterns from premium peptide and wellness brands: confidence, process, and authority. But the site avoids unsupported treatment promises and keeps the legal boundaries easier to see."
+        eyebrow="What matters"
+        title="Clear information. Direct support. Responsible research."
       >
         <div className="grid gap-4 md:grid-cols-3">
           {pillars.map((pillar) => (
@@ -26,9 +25,8 @@ export default function Home() {
       </SectionShell>
 
       <SectionShell
-        eyebrow="Offer architecture"
-        title="Designed for the next business model — not trapped in the current one."
-        copy="Whether this becomes a consult funnel, a content-led authority brand, or a more structured peptide-adjacent offer later, the design system now has range."
+        eyebrow="Support"
+        title="Get the information you need."
       >
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {services.map((service) => (
@@ -40,7 +38,7 @@ export default function Home() {
         </div>
       </SectionShell>
 
-      <SectionShell eyebrow="Flow" title="The page now moves like a top-tier funnel.">
+      <SectionShell eyebrow="Get started" title="Three simple steps.">
         <div className="grid gap-4 lg:grid-cols-3">
           {processSteps.map((item) => (
             <article key={item.step} className="glass-card card-panel p-6">
@@ -54,18 +52,17 @@ export default function Home() {
 
       <SectionShell
         eyebrow="Gallery"
-        title="Placeholder imagery with real visual direction."
-        copy="I added a gallery route and a polished placeholder system so this does not feel unfinished while you gather final photography or campaign assets."
+        title="Products, documentation, gear, and community."
       >
-        <GalleryGrid />
+        <GalleryGrid limit={6} />
         <div className="pt-2">
-          <Link href="/gallery" className="ghost-button">Open the full gallery page</Link>
+          <Link href="/gallery" className="ghost-button">View the full gallery</Link>
         </div>
       </SectionShell>
 
       <LegalStrip />
 
-      <SectionShell eyebrow="FAQ snapshot" title="Careful answers without weak energy.">
+      <SectionShell eyebrow="FAQ" title="Common questions.">
         <div className="space-y-4">
           {faqItems.slice(0, 3).map((item) => (
             <details key={item.q} className="glass-card p-6">
@@ -77,11 +74,11 @@ export default function Home() {
       </SectionShell>
 
       <section className="cta-band">
-        <p className="eyebrow">Next move</p>
-        <h2 className="mt-3 text-4xl font-semibold text-white sm:text-5xl">Now it looks like a serious brand. The next step is deciding whether it becomes consult-led, content-led, or compliance-heavy product-led.</h2>
+        <p className="eyebrow">Questions?</p>
+        <h2 className="mt-3 text-4xl font-semibold text-white sm:text-5xl">Ask about products, documentation, or availability.</h2>
         <div className="mt-8 flex flex-wrap gap-4">
-          <Link href="/contact" className="cta-button">Keep building</Link>
-          <Link href="/disclaimer" className="ghost-button">See disclaimer page</Link>
+          <Link href="/contact" className="cta-button">Contact us</Link>
+          <Link href="/disclaimer" className="ghost-button">Read the disclaimer</Link>
         </div>
       </section>
     </div>

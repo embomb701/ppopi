@@ -6,8 +6,8 @@ export default function GalleryPage() {
     <div className="space-y-12 py-10">
       <SectionShell
         eyebrow="Gallery"
-        title="Placeholder assets with a premium visual brief built in."
-        copy="These placeholders are not filler blocks. They are art-directed slots for the exact style of assets this brand wants: chrome, shadow, blue edge light, premium texture, and controlled performance energy."
+        title="The Peptide Papi in pictures."
+        copy="Products, documentation, branded gear, and community highlights. Select any image to view it full size."
       >
         <GalleryGrid />
       </SectionShell>

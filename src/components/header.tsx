@@ -14,7 +14,7 @@ export function Header() {
         <Link href="/" className="brand-pill">
           <Image src="/logo.jpg" alt="The Peptide Papi logo" width={44} height={44} className="h-11 w-11 rounded-full object-cover" />
           <div>
-            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-[#6cb7ff]">Elite concept build</p>
+            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-[#6cb7ff]">Built Different</p>
             <p className="text-sm font-medium text-white">{site.name}</p>
           </div>
         </Link>
@@ -30,7 +30,7 @@ export function Header() {
           })}
         </nav>
 
-        <Link href="/contact" className="cta-button">Start here</Link>
+        <Link href="/contact" className="cta-button">Contact</Link>
       </div>
 
       <div className="border-t border-white/5 px-4 py-3 lg:hidden">

@@ -20,6 +20,9 @@
 # production
 /build
 
+# local source images (web copies live in public/gallery)
+/img/
+
 # misc
 .DS_Store
 *.pem

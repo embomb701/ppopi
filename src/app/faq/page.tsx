@@ -6,8 +6,8 @@ export default function FaqPage() {
     <div className="space-y-12 py-10">
       <SectionShell
         eyebrow="FAQ"
-        title="Clear answers before the next decision."
-        copy="This page explains why the wording is tighter, why the disclaimer is more prominent, and how the site can branch later without tearing down the design system."
+        title="Frequently asked questions."
+        copy="Important information about research use, documentation, support, and availability."
       >
         <div className="space-y-4">
           {faqItems.map((item) => (
