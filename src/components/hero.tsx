@@ -17,7 +17,8 @@ export function Hero() {
           Research-focused products, transparent documentation, and direct support from The Peptide Papi.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
-          <Link href="/gallery" className="cta-button">View the gallery</Link>
+          <Link href="/products" className="cta-button">View products</Link>
+          <Link href="/gallery" className="ghost-button">View the gallery</Link>
           <Link href="/contact" className="ghost-button">Contact us</Link>
         </div>
         <div className="mt-10 grid gap-4 sm:grid-cols-3">

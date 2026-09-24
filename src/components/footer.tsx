@@ -15,12 +15,13 @@ export function Footer() {
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="glass-card p-5">
             <p className="eyebrow">Contact</p>
-            <p className="mt-3 break-all text-white/70">{site.email}</p>
-            <p className="text-white/70">{site.instagram}</p>
+            <Link href="/contact" className="mt-3 block font-semibold text-white">Send a message</Link>
+            <p className="mt-2 text-white/70">{site.instagram}</p>
           </div>
           <div className="glass-card p-5">
             <p className="eyebrow">Explore</p>
             <div className="mt-3 grid gap-2 text-white/70">
+              <Link href="/products">Products</Link>
               <Link href="/gallery">Gallery</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/disclaimer">Disclaimer</Link>
