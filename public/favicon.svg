@@ -1,19 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-label="The Peptide Papi">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" aria-label="The Peptide Papi">
   <defs>
-    <linearGradient id="pGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#6cb7ff"/>
-      <stop offset="100%" stop-color="#3a8fd9"/>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8fd3ff"/>
+      <stop offset="0.45" stop-color="#168cff"/>
+      <stop offset="1" stop-color="#004bff"/>
+    </linearGradient>
+    <linearGradient id="s" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#cfd7e6"/>
+      <stop offset="1" stop-color="#7f8da6"/>
     </linearGradient>
   </defs>
-  <!-- Dark rounded background -->
-  <rect width="32" height="32" rx="6" fill="#0a0f1c"/>
-  <!-- Bold capital P -->
-  <path 
-    d="M8 6 h10 a6 6 0 0 1 0 12 H8 V6 m0 6 h8" 
-    fill="none" 
-    stroke="url(#pGrad)" 
-    stroke-width="3.5" 
-    stroke-linecap="round" 
-    stroke-linejoin="round"
-  />
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="#020610" stroke="url(#b)" stroke-width="4"/>
+  <path d="M20 52V14h17c8 0 14 5 14 13s-6 13-14 13h-8v12z" fill="url(#s)"/>
+  <path d="M29 22h7c4 0 7 2 7 5s-3 5-7 5h-7z" fill="#020610"/>
+  <path d="M22 13l4-7 5 7 5-7 5 7 5-7 4 7-3 5H25z" fill="url(#s)" stroke="#168cff" stroke-width="1.2"/>
+  <path d="M35 20c-11 10 12 16-1 29M44 20c-12 11 10 17-3 30" fill="none" stroke="url(#b)" stroke-width="4" stroke-linecap="round"/>
 </svg>

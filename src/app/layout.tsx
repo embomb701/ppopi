@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   icons: {
     icon: [
-      { url: "/favicon.svg?v=20260925", type: "image/svg+xml" },
-      { url: "/favicon.ico?v=20260925", sizes: "16x16 32x32" },
-      { url: "/icon-32.png?v=20260925", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico?v=20260925b", sizes: "any", type: "image/x-icon" },
+      { url: "/icon-32.png?v=20260925b", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.svg?v=20260925b", type: "image/svg+xml" },
     ],
-    shortcut: "/favicon.svg?v=20260925",
-    apple: "/apple-touch-icon.png?v=20260925",
+    shortcut: "/favicon.ico?v=20260925b",
+    apple: "/apple-touch-icon.png?v=20260925b",
   },
   openGraph: {
     title: site.title,
