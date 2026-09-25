@@ -1,58 +1,101 @@
 import Link from "next/link";
 import { SectionShell } from "@/components/section-shell";
-import { productCategories } from "@/lib/products";
+import { productCategories, compoundSources } from "@/lib/products";
 
 export default function ProductsPage() {
   return (
     <div className="space-y-12 py-10">
       <SectionShell
         eyebrow="Products"
-        title="Research product price list."
-        copy="Browse current products, strengths, and prices. Availability and pricing may change. Contact us to confirm before ordering."
+        title="Research product catalog."
+        copy="Each card includes additional research context (mechanisms and pathways studied). Browse current products, strengths, and prices. All materials are for laboratory and scientific research purposes only. Click any product name or the Research Info link for the primary source explanations."
       >
-        <div className="product-notice">
-          <strong>Research purposes only.</strong> Products are not for human consumption. No medical, treatment, or dosing advice is provided.
+        <div className="product-notice mb-8">
+          <strong>Research purposes only.</strong> Not for human consumption. No medical, therapeutic, or dosing advice is given or implied.
         </div>
 
-        <div className="grid gap-5 xl:grid-cols-2">
-          {productCategories.map((category) => (
-            <section key={category.name} className="product-category">
-              <div className="product-category-heading">
-                <h2>{category.name}</h2>
-                <span>{category.products.length} {category.products.length === 1 ? "item" : "items"}</span>
-              </div>
+        {productCategories.map((category) => (
+          <section key={category.name} className="product-category mb-10">
+            <div className="flex items-baseline justify-between mb-4">
+              <h2 className="text-2xl font-semibold text-white">{category.name}</h2>
+              <span className="text-sm text-white/50">{category.products.length} items</span>
+            </div>
 
-              <div className="product-column-labels" aria-hidden="true">
-                <span>Product</span>
-                <span>Strength</span>
-                <span>Price</span>
-              </div>
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+              {category.products.map((product, index) => {
+                const source = compoundSources[product.name];
+                const desc = product.description || "Research compound. See primary sources for details.";
+                return (
+                  <div key={`${product.name}-${product.strength}-${index}`} className="product-card group border border-white/10 rounded-xl p-5 bg-white/[0.015] hover:bg-white/[0.03] transition flex flex-col">
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between gap-3">
+                        {source ? (
+                          <a
+                            href={source.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="product-name-link text-lg font-semibold leading-tight hover:underline"
+                          >
+                            {product.name}
+                          </a>
+                        ) : (
+                          <span className="product-name text-lg font-semibold">{product.name}</span>
+                        )}
+                        <span className="product-strength-badge text-xs px-2 py-0.5 rounded-full bg-white/5 text-white/70 whitespace-nowrap self-start mt-1">
+                          {product.strength}
+                        </span>
+                      </div>
 
-              <div className="divide-y divide-white/10">
-                {category.products.map((product, index) => (
-                  <div className="product-row" key={`${product.name}-${product.strength}-${index}`}>
-                    <div className="product-name">{product.name}</div>
-                    <div className="product-strength">
-                      <span className="product-mobile-label">Strength</span>
-                      {product.strength}
+                      <p className="product-description mt-3 text-sm text-white/70 leading-relaxed">
+                        {desc}
+                      </p>
+                      {product.plainDescription && (
+                        <p className="plain-desc mt-2 text-xs text-white/60 leading-snug">
+                          In simpler terms: {product.plainDescription}
+                        </p>
+                      )}
                     </div>
-                    <div className="product-price">${product.price}</div>
-                  </div>
-                ))}
-              </div>
-            </section>
-          ))}
-        </div>
 
-        <section className="cta-band">
-          <p className="eyebrow">Questions or availability</p>
-          <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">Contact The Peptide Papi.</h2>
-          <p className="mt-4 max-w-2xl text-white/70">Send a message about current availability, product documentation, or order support.</p>
-          <div className="mt-6 flex flex-wrap gap-4">
-            <Link href="/order" className="cta-button">Start an order</Link>
+                    <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-4">
+                      <div>
+                        <span className="text-2xl font-semibold tabular-nums">${product.price}</span>
+                      </div>
+
+                      {source && (
+                        <a
+                          href={source.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="research-info-btn inline-flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-lg border border-white/20 hover:border-white/40 transition"
+                        >
+                          Research Info →
+                        </a>
+                      )}
+                    </div>
+
+                    {source?.note && (
+                      <p className="mt-2 text-[10px] text-white/50">
+                        {source.note}
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        ))}
+
+        <div className="cta-band mt-12 text-center">
+          <p className="eyebrow">Ready to request?</p>
+          <h3 className="mt-2 text-2xl font-semibold">Build your order or contact us</h3>
+          <div className="mt-6 flex justify-center gap-4">
+            <Link href="/order" className="cta-button">Start order builder</Link>
             <Link href="/contact" className="ghost-button">Contact us</Link>
           </div>
-        </section>
+          <p className="mt-4 text-xs text-white/50 max-w-md mx-auto">
+            The order form calculates shipping ($25 under $200, free $200+) and emails a request. You will be contacted to arrange payment and fulfillment.
+          </p>
+        </div>
       </SectionShell>
     </div>
   );

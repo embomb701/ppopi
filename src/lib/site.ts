@@ -82,7 +82,6 @@ export const galleryItems = [
   { src: "/gallery/gallery-02.jpg", width: 359, height: 798, title: "Certificate of analysis", alt: "Product certificate of analysis" },
   { src: "/gallery/gallery-03.jpg", width: 599, height: 799, title: "Product collection", alt: "Labeled research product collection" },
   { src: "/gallery/gallery-04.jpg", width: 509, height: 1131, title: "Testing documentation", alt: "Product testing documentation" },
-  { src: "/gallery/gallery-05.jpg", width: 599, height: 799, title: "Community", alt: "The Peptide Papi community photo" },
   { src: "/gallery/gallery-06.jpg", width: 509, height: 1131, title: "Product report", alt: "Research product report" },
   { src: "/gallery/gallery-07.jpg", width: 1200, height: 1600, title: "Research pen", alt: "Research pen product" },
   { src: "/gallery/gallery-08.jpg", width: 1280, height: 1280, title: "Pen collection", alt: "Collection of research pens" },

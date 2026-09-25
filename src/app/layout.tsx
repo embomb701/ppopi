@@ -15,6 +15,15 @@ export const metadata: Metadata = {
   title: site.title,
   description: site.description,
   alternates: { canonical: "/" },
+  icons: {
+    icon: [
+      { url: "/favicon.svg?v=20260925", type: "image/svg+xml" },
+      { url: "/favicon.ico?v=20260925", sizes: "16x16 32x32" },
+      { url: "/icon-32.png?v=20260925", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: "/favicon.svg?v=20260925",
+    apple: "/apple-touch-icon.png?v=20260925",
+  },
   openGraph: {
     title: site.title,
     description: site.description,

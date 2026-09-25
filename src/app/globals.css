@@ -703,3 +703,103 @@ img { display: block; max-width: 100%; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+.learn-more {
+  margin-left: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #6cb7ff;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+.learn-more:hover {
+  color: #9bd7ff;
+}
+
+/* Enhanced product cards for info + links */
+.product-card {
+  padding: 1rem 1.25rem;
+  background: rgba(255,255,255,0.02);
+  transition: background 150ms ease;
+}
+.product-card:hover {
+  background: rgba(255,255,255,0.04);
+}
+.product-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.product-name-link {
+  color: white;
+  font-weight: 650;
+  text-decoration: none;
+}
+.product-name-link:hover {
+  text-decoration: underline;
+  color: #6cb7ff;
+}
+.product-name {
+  color: white;
+  font-weight: 650;
+}
+.product-strength-badge {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.5rem;
+  background: rgba(108,183,255,0.15);
+  color: #6cb7ff;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+.product-description {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  min-height: 2.4em;
+}
+.product-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.research-info-btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6cb7ff;
+  text-decoration: none;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid rgba(108,183,255,0.3);
+  border-radius: 0.5rem;
+  transition: all 150ms ease;
+}
+.research-info-btn:hover {
+  background: rgba(108,183,255,0.15);
+  border-color: #6cb7ff;
+}
+
+/* Slightly improved description area for more text */
+.product-description {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.45;
+  margin-bottom: 0.6rem;
+}
+
+.product-card {
+  min-height: 220px;
+}
+
+.product-description {
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.plain-desc {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-style: normal;
+  padding-top: 2px;
+}
