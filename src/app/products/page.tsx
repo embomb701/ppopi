@@ -8,7 +8,7 @@ export default function ProductsPage() {
       <SectionShell
         eyebrow="Products"
         title="Research product catalog."
-        copy="Each card includes additional research context (mechanisms and pathways studied). Browse current products, strengths, and prices. All materials are for laboratory and scientific research purposes only. Click any product name or the Research Info link for the primary source explanations."
+        copy="Browse current products, strengths, prices, and plain-language descriptions. All materials are for laboratory and scientific research purposes only. Research source links are included where available."
       >
         <div className="product-notice mb-8">
           <strong>Research purposes only.</strong> Not for human consumption. No medical, therapeutic, or dosing advice is given or implied.
@@ -24,7 +24,7 @@ export default function ProductsPage() {
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {category.products.map((product, index) => {
                 const source = compoundSources[product.name];
-                const desc = product.description || "Research compound. See primary sources for details.";
+                const desc = product.description;
                 return (
                   <div key={`${product.name}-${product.strength}-${index}`} className="product-card group border border-white/10 rounded-xl p-5 bg-white/[0.015] hover:bg-white/[0.03] transition flex flex-col">
                     <div className="flex-1">
@@ -46,9 +46,11 @@ export default function ProductsPage() {
                         </span>
                       </div>
 
-                      <p className="product-description mt-3 text-sm text-white/70 leading-relaxed">
-                        {desc}
-                      </p>
+                      {desc && (
+                        <p className="product-description mt-3 text-sm text-white/70 leading-relaxed">
+                          {desc}
+                        </p>
+                      )}
                       {product.plainDescription && (
                         <p className="plain-desc mt-2 text-xs text-white/60 leading-snug">
                           In simpler terms: {product.plainDescription}

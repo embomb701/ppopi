@@ -16,38 +16,33 @@ export const productCategories: ProductCategory[] = [
     name: "Weight Management",
     products: [
       { 
-        name: "Retatrutide", 
+        name: "Reta-weight loss",
         strength: "10mg", 
         price: 80, 
-        description: "Synthetic triple-receptor agonist (GIP/GLP-1/glucagon) under investigation for simultaneous activity at multiple metabolic receptors. Studied in research models for incretin signaling, energy expenditure, and regulation of glucose and lipid metabolism.", 
         plainDescription: "researchers are studying it as a triple-action compound that may help regulate appetite, energy use, and body weight in experimental models."
       },
       { 
-        name: "Retatrutide", 
+        name: "Reta-weight loss",
         strength: "20mg", 
         price: 110, 
-        description: "Synthetic triple-receptor agonist (GIP/GLP-1/glucagon) under investigation for simultaneous activity at multiple metabolic receptors. Studied in research models for incretin signaling, energy expenditure, and regulation of glucose and lipid metabolism.", 
         plainDescription: "researchers are studying it as a triple-action compound that may help regulate appetite, energy use, and body weight in experimental models."
       },
       { 
-        name: "Retatrutide", 
+        name: "Reta-weight loss",
         strength: "30mg", 
         price: 150, 
-        description: "Synthetic triple-receptor agonist (GIP/GLP-1/glucagon) under investigation for simultaneous activity at multiple metabolic receptors. Studied in research models for incretin signaling, energy expenditure, and regulation of glucose and lipid metabolism.", 
         plainDescription: "researchers are studying it as a triple-action compound that may help regulate appetite, energy use, and body weight in experimental models."
       },
       { 
-        name: "Tirzepatide", 
+        name: "Trize-weight loss",
         strength: "30mg", 
         price: 120, 
-        description: "Dual GIP and GLP-1 receptor agonist studied for its effects on glucose-dependent insulinotropic pathways and central appetite regulation. Research focuses on metabolic homeostasis and body weight modulation in experimental models.", 
         plainDescription: "it's being researched for how it might influence blood sugar responses and hunger signals to support weight management studies."
       },
       { 
-        name: "Tirzepatide", 
+        name: "Trize-weight loss",
         strength: "120mg", 
         price: 200, 
-        description: "Dual GIP and GLP-1 receptor agonist studied for its effects on glucose-dependent insulinotropic pathways and central appetite regulation. Research focuses on metabolic homeostasis and body weight modulation in experimental models.", 
         plainDescription: "it's being researched for how it might influence blood sugar responses and hunger signals to support weight management studies."
       },
       { 
@@ -285,16 +280,7 @@ export type CompoundSource = {
 };
 
 export const compoundSources: Record<string, CompoundSource> = {
-  Retatrutide: {
-    url: "https://www.lilly.com/news/stories/what-to-know-about-retatrutide",
-    label: "Lilly (official)",
-    note: "Investigational; not FDA approved for these uses.",
-  },
-  Tirzepatide: {
-    url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tirzepatide",
-    label: "DailyMed (FDA labels)",
-    note: "FDA-approved (Mounjaro/Zepbound).",
-  },
+
   Cagrilintide: {
     url: "https://clinicaltrials.gov/search?term=cagrilintide",
     label: "ClinicalTrials.gov",
