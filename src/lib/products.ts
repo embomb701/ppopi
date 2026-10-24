@@ -223,10 +223,9 @@ export const productCategories: ProductCategory[] = [
     name: "Sexual Health / Hormonal",
     products: [
       { 
-        name: "Testosterone Cypionate (Test C)", 
+        name: "Test 250",
         strength: "250mg", 
         price: 70, 
-        description: "Long-acting ester of the endogenous androgen testosterone. Used in research to study androgen receptor signaling, muscle protein synthesis, and hypothalamic-pituitary-gonadal axis feedback (regulated compound).", 
         plainDescription: "it's a form of testosterone studied for its effects on muscle protein synthesis and hormone regulation in controlled research settings."
       },
       { 
@@ -361,11 +360,7 @@ export const compoundSources: Record<string, CompoundSource> = {
     label: "NIH ODS Fact Sheet",
     note: "Essential nutrient; approved vitamin forms.",
   },
-  "Testosterone Cypionate (Test C)": {
-    url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=testosterone+cypionate",
-    label: "DailyMed",
-    note: "FDA-approved prescription medication.",
-  },
+
   HCG: {
     url: "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=chorionic+gonadotropin",
     label: "DailyMed (HCG)",
